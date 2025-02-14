@@ -13,7 +13,7 @@ const AppNavigator = () => {
 
     return (
         <NavigationContainer>
-            <Stack.Navigator>
+            <Stack.Navigator screenOptions={{headerShown: false}}>
                 {
                     auth ? (
                         <Stack.Screen name="Drawer" component={DrawerScreens} />
