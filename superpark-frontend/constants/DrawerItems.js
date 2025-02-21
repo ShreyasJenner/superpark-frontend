@@ -1,3 +1,4 @@
+import PaymentScreen from "../screens/Payment"
 import ProfileScreen from "../screens/Profile"
 import SettingScreen from "../screens/Settings"
 
@@ -12,4 +13,9 @@ export default [
         component: SettingScreen,
         iconName: 'settings'
     },
+    {
+        name: 'Payment',
+        component: PaymentScreen,
+        iconName: 'logo-paypal'
+    }
 ]
