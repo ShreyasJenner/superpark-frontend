@@ -1,5 +1,8 @@
 import { useState } from "react";
-import { View,Text, StyleSheet } from "react-native"
+import { View,Text, StyleSheet} from "react-native"
+
+import CustomButton from "../components/Button";
+import bootstrapDarkColors from "../constants/Colors";
 
 const PaymentScreen = () => {
     // temporary states to show random data before integration with backend
@@ -31,7 +34,9 @@ const PaymentScreen = () => {
                 <Text style={styles.valueText}> {(durationHr * 3600 + durationMin * 60 + durationSec) * rate}</Text>
             </View>
 
-            
+            <View style={styles.textView}>
+                <CustomButton title={'Pay'} onPress={() => alert('Payment Confirmed')} />
+            </View>
         </View>
     );
     
@@ -39,7 +44,7 @@ const PaymentScreen = () => {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'black',
+        backgroundColor: bootstrapDarkColors.background,
         width: '100%',
         height: '100%',
     },
@@ -50,12 +55,12 @@ const styles = StyleSheet.create({
     },
     labelText: {
         fontSize: 20,
-        color: '#B0B0B0',
+        color: bootstrapDarkColors.text,
         marginBottom: 5,
     },
     valueText: {
         fontSize: 20,
-        color: '#fff',
+        color: bootstrapDarkColors.textMuted,
         fontWeight: 500,
     },
 });
